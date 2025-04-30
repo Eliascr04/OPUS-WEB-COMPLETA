@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 
 // Cargar el XML
 $xml = new DOMDocument();
-$xml->load('C:\Users\chris\Desktop\PAGINA WEB OPUS\importar xml\catalogo1.xml');
+$xml->load('C:/Users/chris/Desktop/PAGINA WEB OPUS/importar xml/catalogo1.xml');
 
 // Procesar cada "libro" en el XML
 foreach ($xml->documentElement->childNodes as $node) {
@@ -65,38 +65,14 @@ foreach ($xml->documentElement->childNodes as $node) {
         }
     }
 
-    // Insertar en la tabla 'libros_xml'
-    $sql = "INSERT INTO libros_xml (titulo, fechaPublicacion, numPaginas, genero, edadRecomendada, portada) 
-            VALUES ('$titulo', '$fechaPublicacion', '$numPaginas', '$genero', '$edadRecomendada', '$portada')";
+    // Insertar en la tabla 'libros_xml' sin necesidad de interactuar con la tabla 'autores'
+    $sql = "INSERT INTO libros_xml (titulo, fechaPublicacion, autor, numPaginas, genero, edadRecomendada, portada) 
+            VALUES ('$titulo', '$fechaPublicacion', '$autor', '$numPaginas', '$genero', '$edadRecomendada', '$portada')";
+    
     if ($conn->query($sql) === TRUE) {
-        // Si tienes una tabla de autores y quieres insertar los autores también, sigue los pasos anteriores.
-        $lastBookId = $conn->insert_id; // Obtener el ID del libro insertado
-
-        // Insertar los autores, si existen en el XML
-        if ($autor != '') {
-            // Verificar si el autor ya está en la base de datos
-            $sqlAuthorCheck = "SELECT id FROM autores WHERE nombre = '$autor'";
-            $result = $conn->query($sqlAuthorCheck);
-            
-            if ($result->num_rows > 0) {
-                $row = $result->fetch_assoc();
-                $authorId = $row['id'];
-            } else {
-                // Si el autor no existe, insertarlo
-                $sqlAuthor = "INSERT INTO autores (nombre) VALUES ('$autor')";
-                if ($conn->query($sqlAuthor) === TRUE) {
-                    $authorId = $conn->insert_id; // Obtener el ID del autor insertado
-                }
-            }
-
-            // Insertar la relación entre el libro y el autor
-            if (isset($authorId)) {
-                $sqlLibroAutor = "INSERT INTO libros_autores (libro_id, autor_id) VALUES ($lastBookId, $authorId)";
-                $conn->query($sqlLibroAutor);
-            }
-        }
+        echo "Libro '$titulo' insertado exitosamente.<br>";
     } else {
-        echo "Error al insertar el libro: " . $conn->error;
+        echo "Error al insertar el libro '$titulo': " . $conn->error . "<br>";
     }
 }
 
