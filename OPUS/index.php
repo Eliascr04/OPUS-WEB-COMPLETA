@@ -31,6 +31,11 @@
     <form action="libros-importados.php" method="get">
         <button type="submit">📚 Ver Libros Importados</button>
     </form>
+    <!-- Aquí agregamos el formulario para borrar los libros de la base de datos -->
+    <form method="POST" action="borrar_libros.php">
+        <button type="submit" name="borrar" onclick="return confirm('¿Estás seguro de que quieres borrar todos los libros? Esta acción no se puede deshacer.')">
+            🗑️ Borrar Los Libros importados desde el xml</button>
+    </form>
 </div>
 <body>
     <div class="header">
