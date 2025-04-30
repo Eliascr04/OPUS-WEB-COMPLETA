@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 
 // Cargar el XML
 $xml = new DOMDocument();
-$xml->load('C:/Users/chris/Desktop/PAGINA WEB OPUS/importar xml/catalogo1.xml');
+$xml->load('xml/catalogo1.xml');
 
 // Procesar cada "libro" en el XML
 foreach ($xml->documentElement->childNodes as $node) {

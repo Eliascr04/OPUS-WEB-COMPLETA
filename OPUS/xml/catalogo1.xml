@@ -1,0 +1,228 @@
+<catalogo>
+<script/>
+<libro>
+<titulo>El gran Gatsby</titulo>
+<fechaPublicacion>1925-04-10</fechaPublicacion>
+<autor>F. Scott Fitzgerald</autor>
+<numPaginas>218</numPaginas>
+<genero>Novela</genero>
+<edadRecomendada>16+</edadRecomendada>
+<portada>https://m.media-amazon.com/images/I/81af+MCATTL.jpg</portada>
+</libro>
+<libro>
+<titulo>Cien años de soledad</titulo>
+<fechaPublicacion>1967-05-30</fechaPublicacion>
+<autor>Gabriel García Márquez</autor>
+<numPaginas>471</numPaginas>
+<genero>Realismo mágico</genero>
+<edadRecomendada>18+</edadRecomendada>
+<portada>https://m.media-amazon.com/images/I/91kr6Kx+9LL.jpg</portada>
+</libro>
+<libro>
+<titulo>1984</titulo>
+<fechaPublicacion>1949-06-08</fechaPublicacion>
+<autor>George Orwell</autor>
+<numPaginas>328</numPaginas>
+<genero>Distopía</genero>
+<edadRecomendada>16+</edadRecomendada>
+<portada>https://m.media-amazon.com/images/I/71kxa1-0mfL.jpg</portada>
+</libro>
+<libro>
+<titulo>Orgullo y prejuicio</titulo>
+<fechaPublicacion>1813-01-28</fechaPublicacion>
+<autor>Jane Austen</autor>
+<numPaginas>279</numPaginas>
+<genero>Romance</genero>
+<edadRecomendada>14+</edadRecomendada>
+<portada>https://m.media-amazon.com/images/I/81OxWQi4VbL.jpg</portada>
+</libro>
+<libro>
+<titulo>Harry Potter y la piedra filosofal</titulo>
+<fechaPublicacion>1997-06-26</fechaPublicacion>
+<autor>J.K. Rowling</autor>
+<numPaginas>223</numPaginas>
+<genero>Fantasía</genero>
+<edadRecomendada>9+</edadRecomendada>
+<portada>https://m.media-amazon.com/images/I/81YOuOGFCJL.jpg</portada>
+</libro>
+<libro>
+<titulo>Don Quijote de la Mancha</titulo>
+<fechaPublicacion>1605-01-16</fechaPublicacion>
+<autor>Miguel de Cervantes</autor>
+<numPaginas>863</numPaginas>
+<genero>Aventura</genero>
+<edadRecomendada>12+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/8/8f/Cervantes_Don_Quixote_1605.jpg</portada>
+</libro>
+<libro>
+<titulo>Los miserables</titulo>
+<fechaPublicacion>1862-04-03</fechaPublicacion>
+<autor>Victor Hugo</autor>
+<numPaginas>1232</numPaginas>
+<genero>Drama</genero>
+<edadRecomendada>16+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/6/6b/Hugo_-_Les_Mis%C3%A9rables_Tome_I.jpg</portada>
+</libro>
+<libro>
+<titulo>Crimen y castigo</titulo>
+<fechaPublicacion>1866-01-01</fechaPublicacion>
+<autor>Fiódor Dostoyevski</autor>
+<numPaginas>671</numPaginas>
+<genero>Psicológico</genero>
+<edadRecomendada>16+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/4/4b/Crime_and_Punishment_cover_-_Project_Gutenberg_eText_1533.jpg</portada>
+</libro>
+<libro>
+<titulo>Moby-Dick</titulo>
+<fechaPublicacion>1851-10-18</fechaPublicacion>
+<autor>Herman Melville</autor>
+<numPaginas>635</numPaginas>
+<genero>Aventura</genero>
+<edadRecomendada>14+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/0/0b/Moby-Dick_FE_title_page.jpg</portada>
+</libro>
+<libro>
+<titulo>La divina comedia</titulo>
+<fechaPublicacion>1320-01-01</fechaPublicacion>
+<autor>Dante Alighieri</autor>
+<numPaginas>798</numPaginas>
+<genero>Poesía</genero>
+<edadRecomendada>18+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/3/3b/Divina_Commedia_1.jpg</portada>
+</libro>
+<libro>
+<titulo>En busca del tiempo perdido</titulo>
+<fechaPublicacion>1913-11-14</fechaPublicacion>
+<autor>Marcel Proust</autor>
+<numPaginas>4215</numPaginas>
+<genero>Modernismo</genero>
+<edadRecomendada>18+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/7/7c/Proust_-_Du_c%C3%B4t%C3%A9_de_chez_Swann_%281913%29.jpg</portada>
+</libro>
+<libro>
+<titulo>El retrato de Dorian Gray</titulo>
+<fechaPublicacion>1890-07-01</fechaPublicacion>
+<autor>Oscar Wilde</autor>
+<numPaginas>254</numPaginas>
+<genero>Gótico</genero>
+<edadRecomendada>16+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/0/0e/The_Picture_of_Dorian_Gray_%281st_edition%29.jpg</portada>
+</libro>
+<libro>
+<titulo>Fausto</titulo>
+<fechaPublicacion>1808-01-01</fechaPublicacion>
+<autor>Johann Wolfgang von Goethe</autor>
+<numPaginas>528</numPaginas>
+<genero>Tragedia</genero>
+<edadRecomendada>18+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/8/8e/Goethe%27s_Faust_First_Edition_Title_Page_1808.jpg</portada>
+</libro>
+<libro>
+<titulo>Ulises</titulo>
+<fechaPublicacion>1922-02-02</fechaPublicacion>
+<autor>James Joyce</autor>
+<numPaginas>730</numPaginas>
+<genero>Experimental</genero>
+<edadRecomendada>18+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/9/93/Joyce_Ulysses_1st.jpg</portada>
+</libro>
+<libro>
+<titulo>Madame Bovary</titulo>
+<fechaPublicacion>1856-12-12</fechaPublicacion>
+<autor>Gustave Flaubert</autor>
+<numPaginas>432</numPaginas>
+<genero>Realismo</genero>
+<edadRecomendada>16+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/7/7f/Madame_Bovary_1857_%28hi-res%29.jpg</portada>
+</libro>
+<libro>
+<titulo>La Regenta</titulo>
+<fechaPublicacion>1884-01-01</fechaPublicacion>
+<autor>Leopoldo Alas "Clarín"</autor>
+<numPaginas>912</numPaginas>
+<genero>Realismo</genero>
+<edadRecomendada>18+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/3/3b/La_Regenta_%28Alas%29_tomo_I.jpg</portada>
+</libro>
+<libro>
+<titulo>Fortunata y Jacinta</titulo>
+<fechaPublicacion>1887-01-01</fechaPublicacion>
+<autor>Benito Pérez Galdós</autor>
+<numPaginas>912</numPaginas>
+<genero>Realismo</genero>
+<edadRecomendada>18+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/2/2b/Fortunata_y_Jacinta_%28Primera_parte%2C_primera_edici%C3%B3n%29.jpg</portada>
+</libro>
+<libro>
+<titulo>Marianela</titulo>
+<fechaPublicacion>1878-01-01</fechaPublicacion>
+<autor>Benito Pérez Galdós</autor>
+<numPaginas>224</numPaginas>
+<genero>Realismo</genero>
+<edadRecomendada>14+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/3/3f/Marianela_%28Gald%C3%B3s%29.jpg</portada>
+</libro>
+<libro>
+<titulo>Pepita Jiménez</titulo>
+<fechaPublicacion>1874-01-01</fechaPublicacion>
+<autor>Juan Valera</autor>
+<numPaginas>304</numPaginas>
+<genero>Realismo</genero>
+<edadRecomendada>16+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/8/8b/Pepita_Jim%C3%A9nez_%28Valera%29.jpg</portada>
+</libro>
+<libro>
+<titulo>El árbol de la ciencia</titulo>
+<fechaPublicacion>1911-01-01</fechaPublicacion>
+<autor>Pío Baroja</autor>
+<numPaginas>304</numPaginas>
+<genero>Existencialismo</genero>
+<edadRecomendada>18+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/1/1a/El_%C3%A1rbol_de_la_ciencia_%28P%C3%ADo_Baroja%29.jpg</portada>
+</libro>
+<libro>
+<titulo>Trafalgar</titulo>
+<fechaPublicacion>1873-01-01</fechaPublicacion>
+<autor>Benito Pérez Galdós</autor>
+<numPaginas>304</numPaginas>
+<genero>Histórico</genero>
+<edadRecomendada>14+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/5/5d/Trafalgar_%28Gald%C3%B3s%29.jpg</portada>
+</libro>
+<libro>
+<titulo>Doña Perfecta</titulo>
+<fechaPublicacion>1876-01-01</fechaPublicacion>
+<autor>Benito Pérez Galdós</autor>
+<numPaginas>304</numPaginas>
+<genero>Realismo</genero>
+<edadRecomendada>16+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/4/4f/Do%C3%B1a_Perfecta_%28Gald%C3%B3s%29.jpg</portada>
+</libro>
+<libro>
+<titulo>La familia de Pascual Duarte</titulo>
+<fechaPublicacion>1942-01-01</fechaPublicacion>
+<autor>Camilo José Cela</autor>
+<numPaginas>192</numPaginas>
+<genero>Tremendismo</genero>
+<edadRecomendada>18+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/6/6b/La_familia_de_Pascual_Duarte_%28Cela%29.jpg</portada>
+</libro>
+<libro>
+<titulo>Tiempo de silencio</titulo>
+<fechaPublicacion>1962-01-01</fechaPublicacion>
+<autor>Luis Martín-Santos</autor>
+<numPaginas>304</numPaginas>
+<genero>Existencialismo</genero>
+<edadRecomendada>18+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/9/9e/Tiempo_de_silencio_%28Luis_Mart%C3%ADn-Santos%29.jpg</portada>
+</libro>
+<libro>
+<titulo>La colmena</titulo>
+<fechaPublicacion>1951-01-01</fechaPublicacion>
+<autor>Camilo José Cela</autor>
+<numPaginas>304</numPaginas>
+<genero>Realismo social</genero>
+<edadRecomendada>18+</edadRecomendada>
+<portada>https://upload.wikimedia.org/wikipedia/commons/7/7e/La_colmena_%28Cela%29.jpg</portada>
+</libro>
+</catalogo>
