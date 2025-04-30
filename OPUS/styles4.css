@@ -1,0 +1,306 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-bottom: 1px solid #eaeaea;
+}
+.header img {
+    height: 80px;
+    background-color: #06282c;
+}
+.nav {
+    display: flex;
+    align-items: center;
+}
+.nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+}
+.nav a.active {
+    font-weight: 700;
+    border-bottom: 2px solid #000;
+}
+.nav .more {
+    position: relative;
+}
+.nav .more:hover .dropdown {
+    display: block;
+}
+.nav .dropdown {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.nav .dropdown a {
+    display: block;
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+.search {
+    display: flex;
+    align-items: center;
+}
+.search i {
+    margin-left: 20px;
+    cursor: pointer;
+}
+.title {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.header1 {
+    background-color: #D9D9D9;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+.header1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #0077b6;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+}
+.header1 h1 {
+    position: relative;
+    z-index: 1;
+    color: #FFFFFF;
+    font-size: 2em;
+}
+.content {
+    padding: 20px;
+    text-align: center;
+}
+.content p {
+    color: #333333;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.step {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #333333;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.step.active {
+    background-color: #005e9b;
+    color: #FFFFFF;
+}
+.progress {
+    margin: 20px 0;
+    text-align: left;
+}
+.progress p {
+    color: #005e9b;
+    font-size: 1em;
+    margin: 0;
+}
+.progress-bar {
+    background-color: #005e9b;
+    height: 20px;
+    width: 5%;
+    border-radius: 10px;
+}
+
+/* Estilos para la barra de progreso */
+.progress {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    height: 20px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #4386cd;
+    transition: width 0.3s ease;
+  }
+  
+  .progress-text {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+ /* ESTILOS DE CALIDAD , ETC */
+/* Estilos para el efecto de olas */
+.header2.wave-background {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0077b6, #00b4d8); /* Fondo degradado */
+    color: white; /* Color del texto */
+    padding: 20px 5px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    width: 100%; /* Ocupa todo el ancho */
+    min-height: 50px; /* Altura mínima para que sea visible */
+}
+
+.header2.animated-wave::before {
+    animation-delay: -5s; /* Retraso para la primera ola */
+}
+
+.header2.animated-wave::after {
+    animation-delay: -2.5s; /* Retraso para la segunda ola */
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(-25%) translateY(-20px); /* Movimiento más pronunciado */
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Asegura que el contenido esté por encima de las olas */
+.header2.wave-background h1,
+.header2.wave-background p {
+    position: relative;
+    z-index: 2; /* Coloca el contenido por encima de las olas */
+}
+/* Estilos para centrar las tarjetas */
+.content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    width: 45%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+/* Animación de rebote */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.card:hover {
+    animation: none; /* Detiene la animación al pasar el ratón */
+}
+.card h2{
+    color: #2f73f2;
+}
+/* Animación sutil al pasar el ratón */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.card {
+    animation: float 3s ease-in-out infinite;
+}
+
+.card:hover {
+    animation: none; /* Detiene la animación al pasar el ratón */
+}
+ /* Footer Styles */
+ .footer {
+    position: relative; /* o fixed si quieres que esté siempre visible */
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .footer a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer a:hover {
+    color: #d9534f;
+  }
+  
+  .footer .social-icons {
+    margin-top: 10px;
+  }
+  
+  .footer .social-icons a {
+    margin: 0 5px;
+    color: #666;
+  }
+  
+  .footer .social-icons a:hover {
+    color: #d9534f;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .fosca-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  }
+  
