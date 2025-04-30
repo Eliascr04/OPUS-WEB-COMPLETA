@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 
 // Cargar el XML
 $xml = new DOMDocument();
-$xml->load('C:/Users/chris/Desktop/PAGINA WEB OPUS/importar xml/catalogo.xml');
+$xml->load('C:\Users\chris\Desktop\PAGINA WEB OPUS\importar xml\catalogo1.xml');
 
 // Procesar cada "libro" en el XML
 foreach ($xml->documentElement->childNodes as $node) {
@@ -66,7 +66,7 @@ foreach ($xml->documentElement->childNodes as $node) {
     }
 
     // Insertar en la tabla 'libros_xml'
-    $sql = "INSERT INTO libros_xml (titulo, fecha_publicacion, num_paginas, genero, edad_recomendada, portada) 
+    $sql = "INSERT INTO libros_xml (titulo, fechaPublicacion, numPaginas, genero, edadRecomendada, portada) 
             VALUES ('$titulo', '$fechaPublicacion', '$numPaginas', '$genero', '$edadRecomendada', '$portada')";
     if ($conn->query($sql) === TRUE) {
         // Si tienes una tabla de autores y quieres insertar los autores también, sigue los pasos anteriores.
