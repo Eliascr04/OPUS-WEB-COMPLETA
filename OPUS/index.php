@@ -14,6 +14,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div style="margin-bottom: 20px;">
+    <!-- Exportar a XML -->
+    <form action="exportar.php" method="post">
+        <button type="submit">Exportar a XML</button>
+    </form>
+</div>
+
+<div style="margin-bottom: 20px;">
+    <!-- Importar desde XML (a base de datos) -->
+    <form action="importarXml-BASE.php" method="post" enctype="multipart/form-data">
+        <label for="archivo">Selecciona un archivo XML:</label>
+        <input type="file" name="archivo" id="archivo" required>
+        <br><br>
+        <button type="submit">Importar desde XML a la Base de Datos</button>
+    </form>
+</div>
+
+<div>
+    <!-- Ver libros (desde base de datos al HTML) -->
+    <form action="importarxml-HTML.php" method="get">
+        <button type="submit">Ver Libros en la Web</button>
+    </form>
+</div>
+<body>
     <div class="header">
       <img alt="Logo" src="imagen/logo1.png">
       <div class="nav">
