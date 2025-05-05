@@ -11,6 +11,14 @@ body {
     padding: 20px 40px;
     border-bottom: 1px solid #eaeaea;
 }
+.acciones-libros{
+  display: flex;
+  justify-content: space-between;
+}
+.cargar-archivo{
+  text-align: center;
+  
+}
 .header img {
     height: 80px;
     background-color: #06282c;

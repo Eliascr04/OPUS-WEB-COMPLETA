@@ -20,11 +20,11 @@
         <button type="submit">📤 Exportar Libros a XML</button>
     </form>
 
-    <!-- Formulario para importar libros desde un archivo XML -->
-    <form action="importarXml-BASE.php" method="post" enctype="multipart/form-data" style="margin-bottom: 15px;">
+<!-- Formulario para importar libros desde un archivo XML -->
+<form action="importarXml-BASE.php" method="post" enctype="multipart/form-data" style="margin-bottom: 15px;">
         <label for="archivo">📥 Selecciona un archivo XML:</label><br>
         <input type="file" name="archivo" id="archivo" required><br><br>
-        <button type="submit">Importar XML a la Base de Datos</button>
+        <button type="submit">📥 Importar XML a la Base de Datos</button>
     </form>
 
     <!-- Botón para ver libros importados desde la base de datos -->
