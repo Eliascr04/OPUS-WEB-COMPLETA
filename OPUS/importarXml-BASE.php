@@ -14,6 +14,7 @@ if ($conn->connect_error) {
 $xml = new DOMDocument();
 $xml->load('xml/catalogo1.xml');
 
+
 // Procesar cada "libro" en el XML
 foreach ($xml->documentElement->childNodes as $node) {
     // Filtrar solo los elementos "libro"
