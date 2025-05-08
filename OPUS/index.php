@@ -28,7 +28,7 @@
     </form>
 
     <!-- Botón para ver libros importados desde la base de datos -->
-    <form action="libros-importados.php" method="get">
+    <form action="importarxml-HTML.php" method="get">
         <button type="submit">📚 Ver Libros Importados</button>
     </form>
     <!-- Aquí agregamos el formulario para borrar los libros de la base de datos -->

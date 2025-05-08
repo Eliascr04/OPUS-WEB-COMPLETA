@@ -6,7 +6,7 @@ $pass = 'alumno1';
 
 $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+    exit("Conexión fallida: " . $conn->connect_error);
 }
 
 $result = $conn->query("SELECT * FROM libros_xml"); 
@@ -17,6 +17,7 @@ $result = $conn->query("SELECT * FROM libros_xml");
 <head>
     <meta charset="UTF-8">
     <title>Libros importados</title>
+    <link rel="stylesheet" href="libros-importados.css">
 </head>
 <body>
     <h1>Libros Importados desde XML</h1>
@@ -31,18 +32,24 @@ $result = $conn->query("SELECT * FROM libros_xml");
             <th>Edad Recomendada</th>
             <th>Portada</th>
         </tr>
-        <?php while ($row = $result->fetch_assoc()): ?>
-        <tr>
-            <td><?= htmlspecialchars($row['id']) ?></td>
-            <td><?= htmlspecialchars($row['titulo']) ?></td>
-            <td><?= htmlspecialchars($row['autor']) ?></td>
-            <td><?= htmlspecialchars($row['fechaPublicacion']) ?></td>
-            <td><?= htmlspecialchars($row['numPaginas']) ?></td>
-            <td><?= htmlspecialchars($row['genero']) ?></td>
-            <td><?= htmlspecialchars($row['edadRecomendada']) ?></td>
-            <td><img src="<?= htmlspecialchars($row['portada']) ?>" alt="Portada" width="100"></td>
-        </tr>
-        <?php endwhile; ?>
+        <?php
+// Ejecutar la consulta
+$result = $conn->query("SELECT * FROM libros_xml");
+
+// Mostrar los datos
+while ($row = $result->fetch_assoc()) {
+    echo "<tr>";
+    echo "<td>" . $row['id'] . "</td>";
+    echo "<td>" . $row['titulo'] . "</td>";
+    echo "<td>" . $row['autor'] . "</td>";
+    echo "<td>" . $row['fechaPublicacion'] . "</td>";
+    echo "<td>" . $row['numPaginas'] . "</td>";
+    echo "<td>" . $row['genero'] . "</td>";
+    echo "<td>" . $row['edadRecomendada'] . "</td>";
+    echo "<td><img src='" . $row['portada'] . "' width='100' alt='Portada'></td>";
+    echo "</tr>";
+    }
+    ?>
     </table>
 </body>
 </html>
