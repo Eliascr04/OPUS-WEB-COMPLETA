@@ -1,40 +1,30 @@
 <?php
-$host = 'localhost';
-$db = 'bibliotecamuskiz';
-$user = 'alumno1';
-$pass = 'alumno1';
+$conexionBD = new mysqli('localhost', 'alumno1', 'alumno1', 'bibliotecamuskiz'); // Crear la conexión con Mysql
 
-$conn = new mysqli($host, $user, $pass, $db);
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+if ($conexionBD->connect_error) { // Verificar si la conexion da error
+    echo "Error de conexión";
+} else {
+    $documentoXML = new DOMDocument('1.0', 'UTF-8'); // Crear el documento XML con versión y codificación
+    $nodoRaiz = $documentoXML->appendChild($documentoXML->createElement('base_de_datos'));// Crear el nodo raíz <base_de_datos>
+    $resultadoConsulta = $conexionBD->query("SELECT * FROM libros");//consulta para obtener los libros
 
-$xml = new DOMDocument('1.0', 'UTF-8');
-$xml->formatOutput = true;
-$root = $xml->createElement('base_de_datos');
-$xml->appendChild($root);
+    // Recorrer cada fila del resultado
+    while ($filaLibro = $resultadoConsulta->fetch_assoc()) {
 
-//exportar la tabla 'libros'
-$tableName = 'libros';
-$tableElement = $xml->createElement($tableName);
+        $nodoLibro = $nodoRaiz->appendChild($documentoXML->createElement('libro'));// Crear un nodo <libro> por cada registro
 
-$rows = $conn->query("SELECT * FROM `$tableName`");
-while ($row = $rows->fetch_assoc()) {
-    $item = $xml->createElement('libro');
-    foreach ($row as $key => $value) {
-        $node = $xml->createElement($key, htmlspecialchars($value));
-        $item->appendChild($node);
+        // Recorrer cada campo del registro columna = el valor
+        foreach ($filaLibro as $nombreCampo => $valorCampo) {
+            // Crear nodos hijos dentro de <libro> con cada dato
+            $nodoLibro->appendChild($documentoXML->createElement($nombreCampo, htmlspecialchars($valorCampo)));
+        }
     }
-    $tableElement->appendChild($item);
+
+    // Enviar el XML al navegador como archivo descargable
+    header('Content-type: text/xml');
+    header('Content-Disposition: attachment; filename="libros.xml"');
+    echo $documentoXML->saveXML();
+
+    $conexionBD->close();// Cerrar la conexión a la base de datos
 }
-
-$root->appendChild($tableElement);
-
-// Enviar el XML al navegador como descarga
-header('Content-type: text/xml');
-header('Content-Disposition: attachment; filename="libros.xml"');
-
-echo $xml->saveXML();
-$conn->close();
 ?>
-
