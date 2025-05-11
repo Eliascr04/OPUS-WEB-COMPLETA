@@ -14,28 +14,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="acciones-libros" style="margin-bottom: 30px;">
-    <!-- Botón para exportar libros a XML -->
-    <form action="exportar.php" method="post" style="margin-bottom: 15px;">
+<?php session_start(); ?>
+<div class="acciones-libros">
+<?php if (isset($_SESSION['usuario'])): ?>
+    <!-- Mostramos los botones solo si hay sesión iniciada -->
+    <form action="exportar.php" method="post">
         <button type="submit">📤 Exportar Libros a XML</button>
     </form>
 
-<!-- Formulario para importar libros desde un archivo XML -->
-<form action="importarXml-BASE.php" method="post" enctype="multipart/form-data" style="margin-bottom: 15px;">
-        <label for="archivo">📥 Selecciona un archivo XML:</label><br>
-        <input type="file" name="archivo" id="archivo" required><br><br>
+    <form action="importarXml-BASE.php" method="post" enctype="multipart/form-data">
+        <label for="archivo">📥 Selecciona un archivo XML:</label>
+        <input type="file" name="archivo" id="archivo" required>
         <button type="submit">📥 Importar XML a la Base de Datos</button>
     </form>
 
-    <!-- Botón para ver libros importados desde la base de datos -->
     <form action="importarxml-HTML.php" method="post">
         <button type="submit">📚 Ver Libros Importados</button>
     </form>
-    <!-- Aquí agregamos el formulario para borrar los libros de la base de datos -->
+
     <form method="POST" action="borrar_libros.php">
         <button type="submit" name="borrar" onclick="return confirm('¿Estás seguro de que quieres borrar todos los libros? Esta acción no se puede deshacer.')">
-            🗑️ Borrar Los Libros importados desde el xml</button>
+            🗑️ Borrar los libros
+        </button>
     </form>
+<?php else: ?>
+    <p><strong>⚠️ Debes iniciar sesión para acceder a estas funciones.</strong></p>
+<?php endif; ?>
 </div>
 <body>
     <div class="header">
