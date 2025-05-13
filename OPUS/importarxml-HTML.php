@@ -20,6 +20,7 @@ $result = $conn->query("SELECT * FROM libros_xml");
     <link rel="stylesheet" href="libros-importados.css">
 </head>
 <body>
+    <a href="index.php">INICIO</a>
     <h1>Libros Importados desde XML</h1>
     <table border="1">
         <tr>

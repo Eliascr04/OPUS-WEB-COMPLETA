@@ -37,8 +37,6 @@
             🗑️ Borrar los libros
         </button>
     </form>
-<?php else: ?>
-    <p><strong>⚠️ Debes iniciar sesión para acceder a estas funciones.</strong></p>
 <?php endif; ?>
 </div>
 <body>

@@ -1,3 +1,8 @@
+<a href="index.php">INICIO</a>
+<br>
+<br>
+<br>
+<br>
 <?php
 
 $host = 'localhost';
