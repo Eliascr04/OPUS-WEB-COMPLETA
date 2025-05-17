@@ -1,25 +1,21 @@
 <?php
-// Datos de conexión a la base de datos
+
 $host = 'localhost';
 $db = 'bibliotecamuskiz';
 $user = 'alumno1';
 $pass = 'alumno1';
 
-// Crear la conexión con la base de datos
+
 $conn = new mysqli($host, $user, $pass, $db);
 
-// Verificar si hay un error en la conexión
 if ($conn->connect_error) {
     exit("Conexión fallida: " . $conn->connect_error);
 }
 
-// Consultar los libros
 $result = $conn->query("SELECT * FROM libros_xml");
 
-// Recuperar todos los registros en un solo paso
 $libros = $result->fetch_all(MYSQLI_ASSOC);
 
-// Cerrar la conexión después de ejecutar la consulta
 $conn->close();
 ?>
 

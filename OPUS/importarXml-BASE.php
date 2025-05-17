@@ -19,15 +19,12 @@ if ($conn->connect_error) {
 // Cargar el XML
 $xml = simplexml_load_file('xml/catalogo1.xml') or exit("Error al cargar el XML.");
 
-// Procesar cada libro usando foreach
 foreach ($xml->libro as $libro) {   
-    // Preparar la consulta SQL para insertar el libro
     $sql = "INSERT INTO libros_xml (titulo, fechaPublicacion, autor, numPaginas, genero, edadRecomendada, portada)
             VALUES ('" . $libro->titulo . "', '" . $libro->fechaPublicacion . "', '" . $libro->autor . "', 
             '" . $libro->numPaginas . "', '" . $libro->genero . "', '" . $libro->edadRecomendada . "',
             '" . $libro->portada . "')";
 
-    // Ejecutar la consulta
     if ($conn->query($sql) == TRUE) {
         echo "Libro '" . $libro->titulo . "' insertado exitosamente.<br>";
     } else {
@@ -35,7 +32,6 @@ foreach ($xml->libro as $libro) {
     }
 }
 
-// Cerrar la conexión a la base de datos
 $conn->close();
 echo "<br> Importación completada.";
 ?>
