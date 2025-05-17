@@ -1,15 +1,26 @@
 <?php
+// Datos de conexión a la base de datos
 $host = 'localhost';
 $db = 'bibliotecamuskiz';
 $user = 'alumno1';
 $pass = 'alumno1';
 
+// Crear la conexión con la base de datos
 $conn = new mysqli($host, $user, $pass, $db);
+
+// Verificar si hay un error en la conexión
 if ($conn->connect_error) {
     exit("Conexión fallida: " . $conn->connect_error);
 }
 
-$result = $conn->query("SELECT * FROM libros_xml"); 
+// Consultar los libros
+$result = $conn->query("SELECT * FROM libros_xml");
+
+// Recuperar todos los registros en un solo paso
+$libros = $result->fetch_all(MYSQLI_ASSOC);
+
+// Cerrar la conexión después de ejecutar la consulta
+$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -33,28 +44,18 @@ $result = $conn->query("SELECT * FROM libros_xml");
             <th>Edad Recomendada</th>
             <th>Portada</th>
         </tr>
-        <?php
-// Ejecutar la consulta
-$result = $conn->query("SELECT * FROM libros_xml");
-
-// Mostrar los datos
-while ($row = $result->fetch_assoc()) {
-    echo "<tr>";
-    echo "<td>" . $row['id'] . "</td>";
-    echo "<td>" . $row['titulo'] . "</td>";
-    echo "<td>" . $row['autor'] . "</td>";
-    echo "<td>" . $row['fechaPublicacion'] . "</td>";
-    echo "<td>" . $row['numPaginas'] . "</td>";
-    echo "<td>" . $row['genero'] . "</td>";
-    echo "<td>" . $row['edadRecomendada'] . "</td>";
-    echo "<td><img src='" . $row['portada'] . "' width='100' alt='Portada'></td>";
-    echo "</tr>";
-    }
-    ?>
+        <?php foreach ($libros as $row): ?>
+            <tr>
+                <td><?= $row['id'] ?></td>
+                <td><?= $row['titulo'] ?></td>
+                <td><?= $row['autor'] ?></td>
+                <td><?= $row['fechaPublicacion'] ?></td>
+                <td><?= $row['numPaginas'] ?></td>
+                <td><?= $row['genero'] ?></td>
+                <td><?= $row['edadRecomendada'] ?></td>
+                <td><img src="<?= $row['portada'] ?>" width="100" alt="Portada"></td>
+            </tr>
+        <?php endforeach; ?>
     </table>
 </body>
 </html>
-
-<?php
-$conn->close();
-?>

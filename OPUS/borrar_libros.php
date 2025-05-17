@@ -5,38 +5,30 @@
 <br>
 <?php
 
-$host = 'localhost';
-$db = 'bibliotecamuskiz';
-$user = 'alumno1';
-$pass = 'alumno1';
+// Datos de conexión a la base de datos
+$host = 'localhost'; // Dirección del servidor
+$db = 'bibliotecamuskiz'; // Nombre de la base de datos
+$user = 'alumno1'; // Usuario
+$pass = 'alumno1'; // Contraseña
 
+// Crear conexión con la base de datos
 $conn = new mysqli($host, $user, $pass, $db);
+
+// Verificar si la conexión ha sido exitosa
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// Verificar si se presionó el botón para borrar
-if (isset($_POST['borrar'])) {
-    // Iniciar transacción
-    $conn->begin_transaction();
+// Eliminar todos los libros de la tabla automáticamente al cargar la página
+$sql = "DELETE FROM libros_xml"; // Consulta para borrar todos los registros
 
-    try {
-        // Eliminar todos los libros de la tabla
-        $sql = "DELETE FROM libros_xml";
-        if ($conn->query($sql) === TRUE) {
-            echo "Todos los libros han sido borrados correctamente.";
-        } else {
-            throw new Exception("Error al borrar los libros: " . $conn->error);
-        }
-
-        // Confirmar la transacción
-        $conn->commit();
-    } catch (Exception $e) {
-        $conn->rollback(); // Revierte la transacción en caso de error
-        echo "Hubo un error: " . $e->getMessage();
-    }
+// Ejecutar la consulta
+if ($conn->query($sql) === TRUE) {
+    echo "Todos los libros han sido borrados correctamente.";
+} else {
+    echo "Error al borrar los libros: " . $conn->error;
 }
 
+// Cerrar la conexión a la base de datos
 $conn->close();
-
 ?>
