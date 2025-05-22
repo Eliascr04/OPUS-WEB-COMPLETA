@@ -5,15 +5,16 @@ $db = 'bibliotecamuskiz';
 $user = 'alumno1';
 $pass = 'alumno1';
 
-
+//mysqli permite conectar a la base de datos mediante php
 $conn = new mysqli($host, $user, $pass, $db);
 
 if ($conn->connect_error) {
-    exit("Conexión fallida: " . $conn->connect_error);
+    exit("Conexión fallida: ");
 }
-
+//ejecuta una consulta sql que selecciona todas ls columnas
+//de todas las filas de la tabla y las guardamos en la variable result
 $result = $conn->query("SELECT * FROM libros_xml");
-
+//fetch_all recupera todas las filas
 $libros = $result->fetch_all(MYSQLI_ASSOC);
 
 $conn->close();

@@ -15,15 +15,15 @@ $conn = new mysqli($host, $user, $pass, $db);
 
 
 if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+    exit("Conexión fallida: ");
 }
 
 $sql = "DELETE FROM libros_xml";
-
-if ($conn->query($sql) === TRUE) {
+//query() es un método de la clase mysqli en PHP
+if ($conn->query($sql) == TRUE) {
     echo "Todos los libros han sido borrados correctamente.";
 } else {
-    echo "Error al borrar los libros: " . $conn->error;
+    echo "Error al borrar los libros: ";
 }
 
 $conn->close();

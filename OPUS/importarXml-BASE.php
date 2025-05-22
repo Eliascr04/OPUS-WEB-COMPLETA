@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 
 // Cargar el XML
 $xml = simplexml_load_file('xml/catalogo1.xml') or exit("Error al cargar el XML.");
-
+//extrae los datos del libro y crea una consulta insert para guardar los libros en la base de datos
 foreach ($xml->libro as $libro) {   
     $sql = "INSERT INTO libros_xml (titulo, fechaPublicacion, autor, numPaginas, genero, edadRecomendada, portada)
             VALUES ('" . $libro->titulo . "', '" . $libro->fechaPublicacion . "', '" . $libro->autor . "', 
